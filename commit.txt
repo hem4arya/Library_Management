@@ -1,0 +1,30 @@
+LOGINCONTROLLER
+{ 
+   function =  create_Student_Account  route =  /student/signin 
+}
+
+LOGINSERVICES
+{
+  function =  studentlogin 
+}
+
+STUDENTCONTROLLER
+ {
+   function =  create_Student_Account   route = /student/signin 
+ }
+
+ STUDENTSERVICE 
+ {
+    function = creatStdCard
+ }
+
+ LIBRARIAN_CONTROOLER
+ {
+    function = getStudent, handel_request route = get_student, s_request # geting all pending  student & accepting those requests
+ }
+   
+ LIBRARIAN_SERVICE
+ {
+ function = getPendingStudents,handelRequest
+ }
+

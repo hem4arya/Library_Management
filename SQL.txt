@@ -1,0 +1,11 @@
+create table books(id int(255) primary key auto_increment, book_barcode_no int(255), book_name varchar(50), librarian_id int(100), status boolean default True, foreign key(librarian_id) references librarian(id));
+insert into books(book_barcode_no, book_name, librarian_id, status ) values (1, 'hem', 9, True);
+alter table books add fulltext(book_name)
+alter table books add unique(book_barcode_no)
+
+ALTER TABLE `elibrary`.`student` 
+CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT
+
+ALTER TABLE `elibrary`.`student` 
+CHANGE COLUMN `identity_img` `identity_img` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `challan_img` `challan_img` VARCHAR(100) NULL DEFAULT NULL ;
